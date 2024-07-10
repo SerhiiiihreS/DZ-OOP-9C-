@@ -19,13 +19,13 @@ public:
 	void SetName(const char* nm);
 	void SetSurname(const char* srn);
 	void SetAge(int ag);
-	void SetGroup(int ag);
+	void SetSerialnum(char* nm);
 
 
 	const char* GetName()const;
 	const char* GetSurname()const;
 	int GetAge()const;
-	int GetGroup()const;
+	int GetSerialnum()const;
 
 	void Print()const;
 };

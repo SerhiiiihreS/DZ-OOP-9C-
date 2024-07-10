@@ -74,10 +74,10 @@ void Passport::SetAge(int ag)
 	}
 }
 
-void Passport::SetGroup(int gr)
+void Passport::SetSerialnum(char* nm)
 {
-	group = gr;
 }
+
 
 const char* Passport::GetName() const
 {
@@ -94,10 +94,11 @@ int Passport::GetAge() const
 	return age;
 }
 
-int Passport::GetGroup() const
+int Passport::GetSerialnum() const
 {
-	return group;
+	return 0;
 }
+
 
 void Passport::Print() const
 {
