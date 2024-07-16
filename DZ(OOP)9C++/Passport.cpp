@@ -74,8 +74,13 @@ void Passport::SetAge(int ag)
 	}
 }
 
-void Passport::SetSerialnum(char* nm)
+void Passport::SetSerialnum(char* sn)
 {
+	if (this->Serialnum != nullptr) {
+		delete[]Serialnum;
+	}
+	this->Serialnum = new char[strlen(sn) + 1];
+	strcpy_s(this->Serialnum, strlen(sn) + 1, sn);
 }
 
 
@@ -94,14 +99,15 @@ int Passport::GetAge() const
 	return age;
 }
 
-int Passport::GetSerialnum() const
+const char* Passport::GetSerialnum() const
 {
-	return 0;
+	return Serialnum
+		;
 }
 
 
-void Passport::Print() const
+void Passport::Print4() const
 {
 
-	cout << "Name" << Name << endl << "Surname" << Surname << endl << "Age" << age << endl << 
+	cout << "Name" << Name << endl << "Surname" << Surname << endl << "Age" << age << endl << "Serialnum" << Serialnum;
 }

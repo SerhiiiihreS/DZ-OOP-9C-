@@ -25,8 +25,8 @@ public:
 	const char* GetName()const;
 	const char* GetSurname()const;
 	int GetAge()const;
-	int GetSerialnum()const;
+	const char* GetSerialnum()const;
 
-	void Print()const;
+	void Print4()const;
 };
 
